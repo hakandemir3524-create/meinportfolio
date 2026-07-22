@@ -1,0 +1,1162 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #0A192F;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-margin-top: 120px;
+}
+
+/*.........................Allgemein */
+body{
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	line-height: 2.0em;
+	color: #191970; 
+}
+
+
+h1{
+	margin-bottom: 20px;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color:#072B73;
+}
+h2{
+	padding-bottom: 40px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+h3{
+	font-size: 21px;
+	margin-bottom: 40px;
+	font-weight: 700;
+	text-transform: uppercase;	
+}
+
+h4{
+	font-size: 18px;
+	margin-bottom: 15px;
+	font-weight: 600;
+	color: #191970;	
+}
+h5{
+	font-weight: 600;
+	font-size: 16px;	
+	
+}
+
+p{
+	line-height: 2.0em;
+	font-weight: 500;
+	font-size: 14pt;
+	
+}
+a{
+	font-weight: 400;
+
+	
+}
+p:last-child{
+	margin-bottom: 0;
+}
+
+
+
+/* ..........................Gridsystem */
+.row{
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	align-items: stretch;
+	
+}
+.row + .row{
+	margin-top: 60px;
+}
+
+.full{
+	padding: 60px 40px;
+	
+}
+
+.medium{
+	padding: 0 25px;
+}
+.medium-2{
+	padding: 0 60px;
+}
+
+.medium-3{
+    text-align: right;
+	padding: 0 60px;
+}
+
+
+.small{
+	padding: 0 25px;
+	max-width: 1200px;
+	margin: auto;
+}
+.col-12{
+	width: 100%;
+	padding: 0 15px;
+}
+.col-6{
+	width: 50%;
+	
+}
+.col-4{
+	width: 33.33%;
+	padding: 0 15px;
+}
+.col-3{
+	width: 25%;
+	padding: 0 15px;
+}
+.col-6 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+/* ...........................header */
+header{
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: space-between;
+	box-shadow:  0 0 40px #00000022;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	opacity: 90%;
+    z-index:9999;
+}
+
+
+header img{
+	width: 40%;
+	margin: 10px 10px 0 40px;
+}
+header nav ul{
+	display: flex;
+	list-style: none;
+}
+header nav ul li{
+	margin: 40px 0 0 40px;
+	text-transform: uppercase;
+    position: relative;
+	font-size: 16px;
+}
+
+nav a{
+	text-decoration:none;
+	transition:0.3s;
+}
+
+nav ul li a:hover,
+footer a:hover{
+	font-weight: 700;
+	color: #072B73;
+	transform: translateY(-2px);
+}
+
+.active a{
+	font-weight:700;
+	color:#0A192F;
+}
+#handy-titel{
+	display: none;
+}
+.menu-toggle{
+	display: none;
+}
+/* ........................submenu */
+header nav ul li .submenu{
+	position: absolute;
+	display: block;
+	padding-top: 10px;
+	padding-right: 0;
+	visibility: hidden;
+	transition: 0.35s;
+    min-width: 250px;
+	opacity: 0;
+	
+}
+
+header nav ul li .submenu li{
+	position: relative;
+	padding: 10px;
+	margin: 0;
+	background-color: white;
+	border-bottom: 1px solid hsla(240, 64%, 27%,1.0);
+	
+}
+header nav ul li .submenu li a{
+	font-weight: 400;
+	text-transform: none;
+	
+}
+header nav ul li:hover .submenu{
+	opacity:1;
+	visibility:visible;
+}
+
+
+header nav ul li .submenu li .submenu{
+	position: absolute;
+    right: 100%;
+	top: -10px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.35s;
+	min-width: 250px;
+}
+header nav ul li .submenu li:hover .submenu{
+	opacity:1;
+	visibility:visible;
+}
+header nav ul li:last-child .submenu {
+  right: 0;
+  left: auto;
+}
+.submenu li a:hover{
+	font-weight:700;
+	color:#072B73;
+	transform:none;
+}
+
+/* ......................button */
+
+.button{
+	color: white;
+	background-color: hsla(240, 64%, 27%,0.7);
+	border-radius: 8px;
+	padding: 0 20px;
+	display: inline-block;
+	margin-top: 20px;
+	transition: 0.3s;
+	font-size: 14px;
+	
+}
+.button:hover{
+	color: #191970;
+	background-color: white;
+	transform: scale(1.1);
+}
+.btn{
+	border: 2px solid #FDFDFD;
+	border-style: groove;
+	padding: 0 15px;
+	display: inline-block;
+	background-color: white;	
+	margin-top: 15px;
+	font-size: 12pt;
+	transition: 0.4s;
+	border-radius: 8px;
+}
+.btn:hover{
+	background-color: hsla(240, 64%, 27%,1.0);
+	border-color: hsla(240, 64%, 27%,1.0);
+	color: white;
+	border-style:none;
+	transform: scale(1.2);
+}
+
+/* ..........................titelbild*/
+
+#titelbild{
+	padding: 190px 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.tb-1{
+	background-image: url("Bilder/Startnow_Logo.webp");
+    background-position-y: 95px;
+}
+
+#titelbild-2{
+	padding: 250px 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tb-2{
+	background-image: url("Bilder/Citylight_Mockup\ \(2\).webp");
+	 background-position-y: 95px;
+}
+#titelbild-3{
+	padding: 225px 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.tb-3{
+	background-image: url("Bilder/Über-mich_Bild.webp");
+	background-position-y: 95px;
+}
+
+#titelbild-4{
+	padding: 175px 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.tb-4{
+	background-image: url("Bilder/kontakt_titelbild.webp");
+	background-position-y: 95px;
+}
+
+/* .......................Titelbild Animation */
+
+.tb-1 h1,
+.tb-2 h1{
+    animation:titleright 1s ease forwards;
+}
+
+.tb-1 h4,
+.tb-2 h3{
+   	opacity:0;
+    animation:subtitle 1s ease forwards;
+    animation-delay:.3s;
+}
+.tb-1 h5,
+.tb-2 h5{
+   	opacity:0;
+    animation:subtitle 1s ease forwards;
+    animation-delay:.6s;
+}
+
+
+
+.skills h1{
+    opacity:0;
+    animation:subtitle 1s ease forwards;
+    animation-delay:.2s;
+}
+
+
+.skills h4{
+   	opacity:0;
+    animation:subtitle 1s ease forwards;
+    animation-delay:.4s;
+}
+
+.skills h2{
+    opacity:0;
+    animation:subtitle 1s ease forwards;
+    animation-delay:.6s;
+}
+
+
+.tb-3 h1,
+.tb-4 h1{
+    animation: titleright 1s ease forwards;
+	color: #eee;
+}
+
+.tb-3 h4,
+.tb-4 h4{
+   opacity:0;
+    animation:subtitle 1s ease forwards;
+    animation-delay:.3s;
+	color: #eee;
+}
+
+.tb-3 h5,
+.tb-4 h5{
+    opacity:0;
+    animation:subtitle 1s ease forwards;
+    animation-delay:.6s;
+	color: #eee;
+}
+.tb-1 .button,
+.tb-2 .button,
+.tb-3 .button,
+.tb-4 .button{
+    opacity:0;
+    animation:buttonUp 1s ease forwards;
+    animation-delay:.9s;
+}
+
+/* ................von links_H1  */
+
+@keyframes titleright {
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* .............langsam_von oben_H3 */
+
+@keyframes subtitle{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ..................von unten_button*/
+
+@keyframes buttonUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+
+/* ..........................main*/	
+main{
+	overflow: hidden;
+}
+main nav ul{
+	
+	list-style: none;
+}
+main img{
+	width: 100%;
+}
+.abstand{
+	padding: 50px 0;
+}
+.zentriert{
+	text-align: center;
+}
+
+
+.blau{
+	background:#f0f4fb;
+	box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+
+
+#häufige-fragen *{
+	text-align: left;
+	margin: 0;
+	color: #0A192F;
+}
+#häufige-fragen h3{
+	margin: 40px 0;
+}
+#häufige-fragen p{
+	margin-bottom: 20px;
+}
+/* ......................Video*/
+iframe{
+    width:100%;
+    aspect-ratio:16/9;
+    border:0;
+    border-radius:10px;
+}
+
+video{
+    width:100%;
+    aspect-ratio:16/9;
+	margin: 0 0 20px 0;
+	border-radius: 10px;
+}
+
+/* ......................image-slider*/	
+
+.image-slider{
+    width:100%;
+    overflow:hidden;
+    padding:30px 0;
+}
+
+.image-track{
+    display:flex;
+    width:max-content;
+    gap:25px;
+    animation:slide 30s linear infinite;
+}
+
+.image-box{
+    width:280px;
+    height:176px;
+    flex-shrink:0;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:10px;
+}
+
+@keyframes slide{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* ..........................Kontakt*/
+.formular form{
+	
+	
+	box-shadow: 0 0 40px #00000011;
+	padding: 40px;
+	border-radius: 40px;
+	
+}
+.formular input{
+	width: 48%;
+	font-size: 15px;
+	margin-bottom: 4%;
+	padding: 20px;
+	font-weight: 300;
+	border: 1px solid  #eee;
+	background-color: #fcfcfc;
+}
+.formular textarea{
+	width: 97%;
+	font-size: 15px;
+	margin-bottom: 4%;
+	padding: 20px;
+	font-weight: 300;
+	border: 1px solid  #eee;
+	background-color: #fcfcfc;
+}
+.formular .button{
+	background-color: #191970;
+	border-color: #191970;
+	color: white;
+	padding: 12px;
+}
+
+/* ..........................Projects*/
+.projects{
+    width:90%;
+    margin:auto;
+    padding:80px 0;
+}
+
+.projects h1, 
+.projects h2, 
+.projects h4{
+    text-align:center;
+    margin-bottom:30px;
+}
+.projects h1{
+    font-size: 32px;
+}
+
+.projects h2{
+    font-size: 32px;
+}
+.projects h4{
+    font-size: 24px;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:220px;
+    gap:25px;
+}
+
+.project-item{
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.project-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.project-item:hover img{
+    transform:scale(1.08);
+}
+
+.big{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+.wide{
+    grid-column:span 2;
+}
+
+/* ..........................footer*/
+.footerbereich{
+	padding: 0;
+}
+.footerbereich a{
+	font-size: 12pt;
+}
+footer img{
+	width: 50%;
+	
+}
+footer p{
+	margin-bottom: 20px;
+	color: #0A192F;
+}
+footer nav ul li{
+	list-style: none;
+	text-transform: uppercase;
+}
+
+#rechtliches{
+	font-size: 10pt;
+}
+#rechtliches nav ul{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+#rechtliches nav ul li a{
+	color: #0A192F;
+	transition: 0.35s;
+	padding: 40px 20px;
+	
+}
+#rechtliches nav ul li a:hover{
+	color:#072B73;
+	font-size: 110%;
+}
+
+
+/* ..................datenschutz*/
+.datenschutz ul li{
+	margin-left: 40px;
+	margin-bottom: 20px;
+	padding-left: 15px;
+	font-size: 12pt;
+	font-weight: 400;
+	color: #0A192F;
+	line-height: 2.0em;
+}
+.datenschutz p{
+	margin-bottom: 20px;
+}
+#impressum{
+	padding: 200px 0;
+}
+#impressum nav ul{
+	
+	list-style: none;
+	margin-bottom: 40px;
+}
+#impressum nav ul li{
+	margin-bottom: 10px;
+	color: #0A192F;
+}
+/* ...................social-media*/
+#socialmedia ul{
+	list-style: none;
+  	padding-left: 100px;
+}
+
+#socialmedia nav ul li{
+	margin: 15px 0;
+	
+}
+#socialmedia nav ul li a{
+	display: flex;
+  	align-items: center;
+  	font-size: 18px;
+  	text-decoration: none;
+	transition: 0.35s;
+}
+#socialmedia nav ul li a i{
+	font-size: 30px;
+	margin-right: 12px;
+	width: 30px;
+	transition: 0.35s;
+}
+#socialmedia nav ul li a:hover{
+	color: #0A192F;
+}
+#socialmedia nav ul li a i:hover{
+	color: #0A192F;
+}
+
+/* ......................scroll-to-top*/
+
+#scroll-to-top{
+	font-size: 30px;
+	right: 20px;
+	bottom: 20px;
+	position: fixed;
+	background-color: white;
+	padding: 10px 15px;
+	color: #0A192F;
+	transition: 0.35s;
+	border-radius: 15px;
+	box-shadow: 0 0 40px #00000022;
+
+}
+
+#scroll-to-top:hover{
+	color: white;
+	background-color:  hsla(240, 64%, 27%,1.0);
+	transform: scale(1.2);
+	cursor: pointer;
+	border-color:  #191970;
+}
+
+/* ......................Skills*/
+.skills{
+
+    padding:80px 8%;
+    background:#f7f9fc;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.skill-card{
+    background:white;
+    border-radius:20px;
+    padding:40px 30px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    transition:.45s;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.skill-card::before{
+    content:"";
+    position:absolute;
+    left:-100%;
+    top:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg, transparent, rgba(55,116,212,.18), transparent);
+    transition:.8s;
+}
+
+.skill-card:hover::before{
+    left:100%;
+}
+
+.skill-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(7,43,115,.18);
+}
+
+.skill-card .icon{
+    font-size:55px;
+    margin-bottom:20px;
+    transition:.5s;
+}
+
+.skill-card:hover .icon{
+    transform:scale(1.15) rotate(8deg);
+}
+
+.skill-card h2{
+    color: #072B73;
+    margin-bottom:15px;
+}
+
+.skill-card p{
+    color:#666;
+}
+
+.skill-card{
+    opacity:0;
+    transform:translateY(70px);
+    animation:show .8s forwards;
+}
+
+.skill-card:nth-child(1){
+    animation-delay:.2s;
+}
+
+.skill-card:nth-child(2){
+    animation-delay:.4s;
+}
+
+.skill-card:nth-child(3){
+    animation-delay:.6s;
+}
+
+.skill-card:nth-child(4){
+    animation-delay:.8s;
+}
+
+@keyframes show{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ......................Responsive Design*/
+
+@media (max-width:960px){
+
+
+.row{
+    flex-wrap:wrap;
+}
+
+.col-6{
+    width:100%;
+}
+
+.col-4{
+    width:100%;
+}
+
+.col-3{
+    width:50%;
+}
+
+.medium,
+.medium-2,
+.medium-3{
+    padding:20px;
+    text-align:center;
+}
+
+.medium-3{
+    text-align:center;
+}
+
+.full{
+    padding:50px 25px;
+}
+
+header nav ul li{
+    margin:15px 0 0 10px;
+	font-size: 13px;
+}
+.handy-footer *{
+	display: none;
+}
+
+
+.formular input,
+.formular textarea{
+    width:100%;
+}
+
+.projects{
+    width:95%;
+}
+
+.project-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.big,
+.wide{
+    grid-column:span 1;
+    grid-row:span 1;
+}
+#titelbild,
+#titelbild-2,
+#titelbild-3,
+#titelbild-4{
+   height: 600px;
+}
+
+#titel{
+	display: none;
+}
+#handy-titel{
+	display: block;
+	margin: 40px 40px 0 40px;
+}
+}
+
+
+/* .............Handy_Responsive Design*/
+
+@media (max-width:768px){
+
+body{
+    font-size:16px;
+    line: height 1.2em;
+}
+
+.full{
+    padding:40px 20px;
+}
+
+.medium,
+.medium-2,
+.medium-3,
+.small{
+    padding:10px 20px;
+}
+
+.row{
+    flex-direction:column;
+}
+
+.col-3,
+.col-4,
+.col-6,
+.col-12{
+    width:100%;
+}
+
+
+
+/* ...................Allgemein */
+
+h1{
+    font-size:24px;
+    line: height 1.2em;;
+}
+
+h2{
+    font-size:21px;
+    padding-bottom:25px;
+}
+
+h3{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+h4{
+    font-size:16px;
+}
+
+h5{
+    font-size:15px;
+}
+
+p{
+    font-size:14px;
+}
+
+/* ...........................Header*/
+
+
+.menu-toggle{
+    display:block;
+    font-size:34px;
+    cursor:pointer;
+}
+header img{
+	width: 240px;
+}
+
+header nav{
+    display:block;
+    position:fixed;
+    top: 95px;
+    right:0;
+    width:250px;
+    background:#fff;
+    box-shadow:-10px 0 25px rgba(0,0,0,.15);
+	transform:translateX(100%);
+    transition:0.4s ease;
+}
+
+header nav.active{
+    transform:translateX(0);
+}
+
+
+header nav ul{
+    display:flex;
+    flex-direction:column;
+    padding:0;
+}
+
+
+header nav ul li{
+    margin:0;
+    padding:18px;
+    text-align:left;
+    border-bottom:1px solid #eee;
+}
+
+
+
+/* .......................Submenu*/
+header nav ul li .submenu{
+    position:static;
+    visibility:visible;
+    opacity:1;
+    display:none;
+    width:100%;
+    box-shadow:none;
+    
+}
+
+header nav ul li:hover .submenu{
+    display:block;
+}
+
+
+#titel{
+	display: none;
+}
+#handy-titel{
+	display: block;
+	margin: 40px 40px 0 40px;
+}
+/* .....................Titelbild*/
+#titelbild,
+#titelbild-2,
+#titelbild-3,
+#titelbild-4{
+   height: 440px;
+}
+
+
+
+/*..............................Buttons */
+.button{
+    margin-bottom: 50px;
+	font-size: 14px;
+	
+}
+.button:hover{
+    border: 1px solid #191970;
+	
+}
+
+.btn{
+    margin-bottom: 50px;
+	font-size: 14px;
+	
+}
+/* ............................Video*/
+video{
+    width:100%;
+}
+
+
+/* .......................Image Slider*/
+.image-box{
+    width:220px;
+    height:140px;
+}
+
+.image-track{
+    gap:15px;
+}
+
+
+/* ..........................Skills*/
+.skills{
+    padding:60px 20px;
+}
+
+.skills-grid{
+    grid-template-columns:50%;
+    justify-content:center;
+	
+}
+.skill-card{
+	padding: 40px;
+}
+
+
+/* .........................Projects*/
+.projects{
+    width:100%;
+    padding:50px 20px;
+}
+
+.project-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.big,
+.wide{
+    grid-column:span 1;
+    grid-row:span 1;
+}
+
+
+/* ......................Kontakt*/
+.formular form{
+    padding:25px;
+}
+
+.formular input,
+.formular textarea{
+    width:100%;
+    margin-bottom:20px;
+}
+
+
+/*.......................Footer*/
+
+
+footer{
+    text-align:center;
+}
+
+footer img{
+    width:170px;
+	padding-bottom: 20px;
+}
+.handy-footer *{
+	display: none;
+}
+	
+#socialmedia ul{
+    padding-left:0;
+}
+
+#socialmedia nav ul li a{
+    justify-content:center;
+}
+
+ #rechtliches nav ul{
+        flex-direction:row;
+        justify-content:center;
+        gap:15px;
+    }
+
+    #rechtliches nav ul li a{
+        padding:5px;
+        font-size:12px;
+    }
+
+/* ...................Scroll Button*/
+#scroll-to-top{
+    right:15px;
+    bottom:15px;
+    font-size:24px;
+    padding:8px 12px;
+}
+
+}
