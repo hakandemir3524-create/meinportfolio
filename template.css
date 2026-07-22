@@ -969,8 +969,11 @@ p{
     font-size:34px;
     cursor:pointer;
 }
+header{
+	padding: 15px;
+}
 header img{
-	width: 240px;
+	width: 200px;
 }
 
 header nav{
@@ -1036,8 +1039,10 @@ header nav ul li:hover .submenu{
 #titelbild-4{
    height: 440px;
 }
-
-
+#titelbild,
+#titelbild-2{
+	background-position-x: -90px ;
+}
 
 /*..............................Buttons */
 .button{
