@@ -1078,7 +1078,7 @@ video{
 }
 
 .skills-grid{
-    grid-template-columns:50%;
+    grid-template-columns:75%;
     justify-content:center;
 	
 }
