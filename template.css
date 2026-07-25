@@ -543,6 +543,7 @@ video{
 	font-weight: 300;
 	border: 1px solid  #eee;
 	background-color: #fcfcfc;
+	resize: vertical;
 }
 .formular .button{
 	background-color: #191970;
