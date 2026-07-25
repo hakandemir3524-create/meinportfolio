@@ -12,3 +12,15 @@ menu.addEventListener("click", function(){
     }
 
 });
+Fancybox.bind('[data-lightbox="portfolio"]', {
+    animated: true,
+    infinite: true,
+
+    Toolbar: {
+        display: {
+            left: ["infobar"],
+            middle: [],
+            right: ["zoom", "fullscreen", "close"]
+        }
+    }
+});
