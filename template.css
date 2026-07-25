@@ -1012,19 +1012,8 @@ header nav ul li{
 
 /* .......................Submenu*/
 header nav ul li .submenu{
-    position:static;
-    visibility:visible;
-    opacity:1;
-    display:none;
-    width:100%;
-    box-shadow:none;
-    
+   	display: none;    
 }
-
-header nav ul li:hover .submenu{
-    display:block;
-}
-
 
 #titel{
 	display: none;
