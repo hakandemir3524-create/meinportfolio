@@ -494,13 +494,13 @@ video{
     animation:slide 30s linear infinite;
 }
 
-.image-box{
+.glightbox{
     width:280px;
     height:176px;
     flex-shrink:0;
 }
 
-.image-box img{
+.glightbox img{
     width:100%;
     height:100%;
     object-fit:cover;
