@@ -10,7 +10,28 @@ menu.addEventListener("click", function(){
     }else{
         menu.innerHTML = "☰";
     }
+// Kontaktformular Prüfung
+const vorname = document.querySelector('input[name="Vorname"]');
+const nachname = document.querySelector('input[name="Nachname"]');
+const telefon = document.querySelector('input[name="Telefon"]');
 
+if(vorname){
+    vorname.addEventListener("input", function(){
+        this.value = this.value.replace(/[^a-zA-ZÄÖÜäöüß\s-]/g, "");
+    });
+}
+
+if(nachname){
+    nachname.addEventListener("input", function(){
+        this.value = this.value.replace(/[^a-zA-ZÄÖÜäöüß\s-]/g, "");
+    });
+}
+
+if(telefon){
+    telefon.addEventListener("input", function(){
+        this.value = this.value.replace(/[^0-9]/g, "");
+    });
+}
 });
 const lightbox = GLightbox({
     selector: ".glightbox",
